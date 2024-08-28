@@ -13,6 +13,12 @@ The Family Face Recognition Tracking System is a Python-based application design
 - **Model Validation**: Evaluate the performance of the recognition model using a validation dataset.
 
 ## Prerequisites
+Clone repository:
+```bash
+git clone https://github.com/kevinvanissa/kevin-app-face-recognition.git
+```
+
+
 Create virtual environment:
 ```bash
 python -m venv myenv
@@ -42,6 +48,10 @@ pip install face_recognition opencv-python numpy matplotlib seaborn scikit-learn
 - training/: Directory containing images for training the model.
 - validation/: Directory containing images for validating the model.
 - unknown_frames/: Directory where unknown face images are saved.
+
+**Important** : If these folders do not exist, they will be created when the program starts. However, there are some structures inside the `training/` and `validation/` folders that must be maintained for the application to work correctly. In the training folder, use subfolders with the correct names of the persons you want the application to know. The validation folder should have one face in each image (multiple images can have the same face) and the name of the person that matches the name of the folder in the training folder. I used multiple images with the same person. You should use an underscore with a number for pictures with the same person. For example, If the name of the person is kevin, then in the training folder, I will use a folder by the name of kevin and store multiple pictures of kevin. The name of these images can be anything. In the validation folder, I will have multiple images of kevin, so I will name the images as follows: kevin_1.jpg, kevin_2.jpg ...
+
+I will include example folders in this repository (training.example, validation.example). 
 
 ## How to Use
 ### 1. Training the Model
